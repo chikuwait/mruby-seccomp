@@ -1,5 +1,4 @@
-# mruby-seccomp   [![Build Status](https://travis-ci.org/haconiwa/mruby-seccomp.svg?branch=master)](https://travis-ci.org/haconiwa/mruby-seccomp)
-
+# mruby-seccomp  [![Build Status](https://travis-ci.com/chikuwait/mruby-seccomp.svg?branch=master)](https://travis-ci.com/chikuwait/mruby-seccomp)
 A mruby gem to access libseccomp API
 
 ## install by mrbgems
