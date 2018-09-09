@@ -150,9 +150,9 @@ static mrb_value mrb_seccomp_start_ptrace(mrb_state *mrb, mrb_value self, int de
           if (mrb_seccomp_on_tracer_trap(mrb, hook, child, detach) < 0) {
             mrb_raise(mrb, E_RUNTIME_ERROR, "Something is wrong in trap event");
           }
-	  if (detach) {
+	        if (detach) {
             return self;
-	  }
+	        }
         }
       }
     } else if (WIFCONTINUED(status)) {
