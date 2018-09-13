@@ -63,7 +63,7 @@ assert("Seccomp.start_trace with forking processes") do
   assert_equal 10, count
 end
 
-assert("Seccomp.start_trace_detach_syscall") do
+assert("Seccomp.start_trace_detach") do
   pid = Process.fork do
     ctx = Seccomp.new(default: :allow) do |rule|
       rule.trace(:uname, 0)
@@ -76,7 +76,6 @@ assert("Seccomp.start_trace_detach_syscall") do
   ret = Seccomp.start_trace_detach(pid) do |syscall, ud|
     count += 1
   end
-  p ret
   assert_not_equal "exited", ret
   assert_equal 1, count
 end
